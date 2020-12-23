@@ -37,12 +37,12 @@ while true; do
 done
 
 while true; do
-    read -p "Would you like to install wiringPI? This is required to control the GPIO (y/n): " yn
+    read -p "Would you like to install WiringPi? This is required to control the GPIO (y/n): " yn
     case $yn in
-        [Yy]* ) git clone git://git.drogon.net/wiringPi;
-        cd wiringPi;
+        [Yy]* ) git clone https://github.com/WiringPi/WiringPi.git;
+        cd WiringPi;
         ./build; cd ..;
-        rm -rf wiringPi;
+        rm -rf WiringPi;
         break;;
         [Nn]* ) break;;
         * ) echo "(Y/N)";;
